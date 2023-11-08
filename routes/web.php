@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get("/page", [PenilaianKreditController::class,"index"]);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user/profil');
 });
 
