@@ -8,26 +8,26 @@
   <div class="flex items-center justify-between">
     <!-- Logo -->
     <div class="flex justify-start">
-      <h5>Penilaian Kredit</h5>
+      <a href="{{url('/')}}" class="hover:opacity-60">Penilaian Kredit</a>
     </div>
 
     <!-- Menu Center -->
     <div class="flex items-center justify-center">
       <!-- Beranda -->
-      <a href="#" class="px-3 py-2 text-gray-800 hover:text-green-700 font-medium">Beranda</a>
+      <a href="{{url('/')}}" class="px-3 py-2 hover:opacity-60">Beranda</a>
       <!-- Tentang Kami -->
-      <a href="#" class="px-3 py-2 text-gray-800 hover:text-green-700 font-medium">Tentang Kami</a>
+      <a href="#tentangkami" class="px-3 py-2 hover:opacity-60">Tentang Kami</a>
       <!-- Pengajuan -->
-      <a href="#" class="px-3 py-2 text-gray-800 hover:text-green-700 font-medium">Pengajuan</a>
+      <a href="{{url('/form')}}" class="px-3 py-2 hover:opacity-60">Pengajuan</a>
     </div>
 
     <!-- Menu End -->
     <div class="flex justify-end">
       <!-- Hi, user -->
-      <a href="#" class="px-3 py-2 text-gray-800 hover:text-green-700 font-medium">Hi, Sultan</a>
+      <a href="#" class="px-3 py-2 hover:opacity-60">Hi, User</a>
 
       <!-- Logout -->
-      <a href="#" class="px-3 py-2 text-gray-800 hover:text-green-700 font-medium">Keluar</a>
+      <a href="#" class="px-3 py-2 hover:opacity-60">Keluar</a>
     </div>
   </div>
 </div>
@@ -35,7 +35,7 @@
 <!-- Main Part -->
 <div class="p-[50px]">
   <div class="bg-[url('/img/bg2.png')] rounded-3xl">
-    <h1 class="flex justify-center font-bold text-[4rem] opacity-100 py-4 tracking-wider">
+    <h1 class="flex justify-center font-bold text-[3.7rem] opacity-100 py-4 tracking-wider">
       PROFIL
     </h1>
 

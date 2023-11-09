@@ -15,7 +15,7 @@
             <img class="w-full max-h-[50rem] object-cover" src="{{asset('images/batik.jpg')}}" alt="Batik">
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-4/5 h-4/5 bg-white p-8 rounded-lg bg-opacity-90 flex flex-col">
-                    <nav class="flex justify-between mb-4">
+                    <nav class="flex justify-between mb-4 text-[20px]">
                         <div>
                             <a href="{{url('/')}}" class="hover:opacity-60">Penilaian Kredit</a>
                         </div>
@@ -31,9 +31,9 @@
                         </div>
                     </nav>
                     <header class="flex items-center flex-1" id="beranda">
-                        <div>
-                            <h1 class="font-medium text-[5rem]">Selamat Datang</h1>
-                            <p class="font-light w-3/4">Sistem penilaian kredit merupakan sistem yang dirancang untuk
+                        <div class="w-3/4">
+                            <h1 class="font-medium text-[5rem] ">PENILAIAN KREDIT</h1>
+                            <p class="font-light">Sistem penilaian kredit merupakan sistem yang dirancang untuk
                                 mengevaluasi dan memberikan penilaian terhadap pengguna sehingga pengguna dapat menilai
                                 kelayakannya dalam mendapatkan pinjaman atau kredit.</p>
                             <button
@@ -75,7 +75,7 @@
                 <a href="{{url('/')}}" class="text-[2rem] font-medium hover:opacity-60">Penilaian Kredit</a>
                 <ul class="flex gap-12 self-center">
                     <li>
-                        <a href="#beranda" class="hover:opacity-60">Beranda</a>
+                        <a href="{{url('/')}}" class="hover:opacity-60">Beranda</a>
                     </li>
                     <li>
                         <a href="#tentangkami" class="hover:opacity-60">Tentang Kami</a>
