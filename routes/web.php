@@ -19,3 +19,6 @@ Route::get('/', function () {
     return view('user/hasil_setuju');
 });
 
+Route::get('/form', function () {
+    return view('pengajuan');
+});
