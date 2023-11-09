@@ -18,6 +18,11 @@ Route::get("/page", [PenilaianKreditController::class,"index"]);
 Route::get('/', function () {
     return view('pages/page');
 });
+
+Route::get('/login', function () {
+    return view('pages.LoginRegister.login');
+});
+
 Route::get('/register', function () {
     return view('pages.LoginRegister.register');
 });
