@@ -17,4 +17,7 @@ Route::get("/page", [PenilaianKreditController::class,"index"]);
 
 Route::get("/", [PenilaianKreditController::class,"index"]);
 
+Route::get('/profil', function () {
+    return view('user/profil');
+});
 

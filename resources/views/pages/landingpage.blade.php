@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="font-lexend text-[24px]">
+    <div class="font-lexend text-[16px]">
         <div class="relative">
             <img class="w-full max-h-[50rem] object-cover" src="{{asset('images/batik.jpg')}}" alt="Batik">
             <div class="absolute inset-0 flex items-center justify-center">
