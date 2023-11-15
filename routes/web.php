@@ -40,4 +40,12 @@ Route::get('/hasil-tolak', function () {
     return view('user/hasil_tolak');
 });
 
+Route::get('/admin-data-pengajuan', function () {
+    return view('admin/all_data_pengajuan');
+});
+
+Route::get('/admin-detail-pengajuan', function () {
+    return view('admin/informasi_detail');
+});
+
 
