@@ -27,7 +27,7 @@ Route::get('/register', function () {
     return view('pages.LoginRegister.register');
 });
 
-Route::get('/form', function () {
+Route::get('/pengajuan', function () {
     return view('pengajuan');
 });
 
@@ -37,6 +37,10 @@ Route::get('/profil-user', function () {
 
 Route::get('/hasil-setuju', function () {
     return view('user/hasil_setuju');
+});
+
+Route::get('/hasil-tolak', function () {
+    return view('user/hasil_tolak');
 });
 
 
