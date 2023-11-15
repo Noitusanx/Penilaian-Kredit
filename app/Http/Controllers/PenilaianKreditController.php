@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PenilaianKreditController extends Controller
 {
     public function index(){
-        return view("pages.page");
+        return view("pages.landingpage");
     }
 }

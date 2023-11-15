@@ -13,11 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/page", [PenilaianKreditController::class,"index"]);
 
-Route::get('/', function () {
-    return view('pages/page');
-});
+Route::get("/", [PenilaianKreditController::class,"index"]);
 
 Route::get('/login', function () {
     return view('pages.LoginRegister.login');
@@ -31,7 +28,7 @@ Route::get('/pengajuan', function () {
     return view('pengajuan');
 });
 
-Route::get('/profil-user', function () {
+Route::get('/profil', function () {
     return view('user/profil');
 });
 
