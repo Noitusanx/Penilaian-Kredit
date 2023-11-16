@@ -12,27 +12,28 @@
 </head>
 
 <body class="bg-[#F9F5F2] font-lexend">
-    <!-- Navbar -->
     <div class="flex justify-between p-[30px]">
-        <!-- Logo -->
         <div class="flex items-center justify-center">
             <a href="{{url('/')}}" class="hover:opacity-60 text-[20px]">Penilaian Kredit</a>
         </div>
-
-        <!-- Menu -->
-        <div class="flex justify-between items-center text-[20px] px-[20px]">
-            <!-- Hi, user -->
-            <a href="#" class="px-3 py-2 hover:opacity-60">Hi, User</a>
-
-            <!-- Beranda -->
-            <a href="{{url('/')}}" class="px-3 py-2 hover:opacity-60">Beranda</a>
-
-            <!-- Kontak -->
-            <a href="#" class="px-3 py-2 hover:opacity-60 scroll-to-tentang-kami">Tentang Kami</a>
-
-            <!-- Logout -->
-            <a href="#" class="px-3 py-2 hover:opacity-60">Keluar</a>
-        </div>
+        <ul class="flex justify-between items-center text-[20px] px-[20px]">
+            <li>
+                <a href=" #" class="px-3 py-2 hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
+            </li>
+            <li>
+                <a href="{{url('/')}}" class="px-3 py-2 hover:opacity-60">Beranda</a>
+            </li>
+            <li>
+                <a href="#" class="px-3 py-2 hover:opacity-60">Tentang Kami</a>
+            </li>
+            <li>
+                <form action="/keluar" method="post">
+                    @csrf
+                    <button type="submit" class="px-3 pt-5 hover:opacity-60">Keluar</button>
+                </form>
+            </li>
+        </ul>
+    </div>
     </div>
     @yield('content')
     <script src="{{asset('js/index.js')}}"></script>
