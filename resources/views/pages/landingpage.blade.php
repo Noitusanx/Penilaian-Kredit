@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Penilaian Kredit</title>
 </head>
 
 <body>
@@ -21,12 +21,27 @@
                         </div>
                         <div>
                             <ul class="flex gap-10 mr-5">
+                                @auth
+                                <li>
+                                    <a href="" class="hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
+                                </li>
+                                <li>
+                                    <a href="#tentangkami" class="hover:opacity-60">Tentang Kami</a>
+                                </li>
+                                <li>
+                                    <form action="/keluar" method="post">
+                                        @csrf
+                                        <button type="submit" class="hover:opacity-60">Keluar</button>
+                                    </form>
+                                </li>
+                                @else
                                 <li>
                                     <a href="{{url('/daftar')}}" class="hover:opacity-60">Daftar</a>
                                 </li>
                                 <li>
                                     <a href=" {{url('/masuk')}}" class="hover:opacity-60">Masuk</a>
                                 </li>
+                                @endauth
                             </ul>
                         </div>
                     </nav>
@@ -36,10 +51,17 @@
                             <p class="font-light">Sistem penilaian kredit merupakan sistem yang dirancang untuk
                                 mengevaluasi dan memberikan penilaian terhadap pengguna sehingga pengguna dapat menilai
                                 kelayakannya dalam mendapatkan pinjaman atau kredit.</p>
+                            @auth
+                            <button
+                                class="bg-[#5E7C60] py-4 px-8 text-white rounded-lg mt-8 bg-opacity-90 hover:opacity-80 font-medium">
+                                <a href="{{url('/pengajuan')}}">Pengajuan</a>
+                            </button>
+                            @else
                             <button
                                 class="bg-[#5E7C60] py-4 px-8 text-white rounded-lg mt-8 bg-opacity-90 hover:opacity-80 font-medium">
                                 <a href="#tentangkami">Tentang Kami</a>
                             </button>
+                            @endauth
                         </div>
                     </header>
                 </div>

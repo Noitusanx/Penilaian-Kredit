@@ -1,28 +1,23 @@
-@extends('layouts.admin') 
+@extends('layouts.admin')
 
 @section('container')
 <!-- Navbar -->
 <div class="flex justify-between p-[30px]">
     <!-- Logo -->
     <div class="flex items-center justify-center">
-        <img class="h-8 w-auto" src="{{url('/image/logo.png')}}" alt="Logo" />
+        <a href="{{url('/')}}" class="hover:opacity-60 text-[20px]">Penilaian Kredit</a>
     </div>
 
     <!-- Menu -->
     <div class="flex justify-between items-center text-[20px] px-[20px]">
         <!-- Hi, user -->
-        <a
-            href="#"
-            class="px-3 py-2 text-gray-800 hover:text-green-700 font-semibold"
-            >Hi, User</a
-        >
+        <a href="#" class="px-3 py-2 hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
 
-        <!-- Logout -->
-        <a
-            href="#"
-            class="px-3 py-2 text-gray-800 hover:text-green-700 font-semibold"
-            >Keluar</a
-        >
+        <form method="POST" action="/keluar" role="none">
+            @csrf
+            <button type="submit" class="px-3 py-2 hover:opacity-60" role="menuitem" tabindex="-1"
+                id="nav-keluar">Keluar</button>
+        </form>
     </div>
 </div>
 
@@ -39,29 +34,19 @@
     <table class="">
         <thead class="">
             <tr>
-                <th
-                    class="w-[120px] h-[50px] bg-[#D5D6C6] text-3xl border border-black text-center"
-                >
+                <th class="w-[120px] h-[50px] bg-[#D5D6C6] text-3xl border border-black text-center">
                     No
                 </th>
-                <th
-                    class="w-[400px] h-[50px] bg-[#D5D6C6] border border-black text-center"
-                >
+                <th class="w-[400px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     Nama
                 </th>
-                <th
-                    class="w-[350px] h-[50px] bg-[#D5D6C6] border border-black text-center"
-                >
+                <th class="w-[350px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     NIK
                 </th>
-                <th
-                    class="w-[250px] h-[50px] bg-[#D5D6C6] border border-black text-center"
-                >
+                <th class="w-[250px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     Status
                 </th>
-                <th
-                    class="w-[200px] h-[50px] bg-[#D5D6C6] border border-black text-center"
-                >
+                <th class="w-[200px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     Form
                 </th>
             </tr>
@@ -81,9 +66,7 @@
                     Diterima
                 </td>
                 <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold"
-                        >View Form</a
-                    >
+                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
                 </td>
             </tr>
             <tr>
@@ -100,9 +83,7 @@
                     Ditolak
                 </td>
                 <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold"
-                        >View Form</a
-                    >
+                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
                 </td>
             </tr>
             <tr>
@@ -119,9 +100,7 @@
                     Diterima
                 </td>
                 <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold"
-                        >View Form</a
-                    >
+                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
                 </td>
             </tr>
         </tbody>

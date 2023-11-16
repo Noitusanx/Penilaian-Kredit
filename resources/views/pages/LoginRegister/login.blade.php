@@ -41,40 +41,32 @@
 					<!-- Content for the left side -->
 				</div>
 
-				<form class="login100-form validate-form">
-
-
+				<form class="login100-form validate-form" action="{{ url('/masuk') }}" method="post">
+					@csrf
 					<span class="login100-form-title p-b-34 p-t-27">
 						Selamat Datang
 					</span>
-
+					<label for="" class="text-[22px]">NIK</label>
 					<div class="wrap-input100 validate-input" data-validate="Enter username">
-						<input class="input100" type="text" name="username">
-						<span class="focus-input100" data-placeholder="NIK"></span>
+						<input class="input100" type="text" name="nik">
+						<span data-placeholder="NIK"></span>
 					</div>
 
+					<label for="" class="text-[22px]">Kata Sandi</label>
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100" data-placeholder="Password"></span>
-					</div>
-
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
+						<input class="input100" type="password" name="password">
+						<span data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
+						<button class="login100-form-btn" type="submit">
+							Masuk
 						</button>
 					</div>
-
-					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
-						</a>
+					<div class="mt-6 container-login100-form-btn">
+						<p class="text-black">Belum mempunyai akun?
+							<a href="{{url('daftar')}}" class=" text-blue-700 hover:opacity-60">Daftar</a>
+						</p>
 					</div>
 				</form>
 			</div>
