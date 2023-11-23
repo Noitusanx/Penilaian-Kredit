@@ -42,22 +42,22 @@
 						Selamat Datang
 					</span>
 
-					<label for="" class="text-[22px]">NIK</label>
+					{{-- <label for="" class="text-[22px]">NIK</label> --}}
 					<div class="wrap-input100-reg validate-input" data-validate="Enter username">
 						<input class="input100" type="text" name="nik">
-						<span class="" data-placeholder="NIK"></span>
+						<span class="focus-input100 " data-placeholder="NIK"></span>
 					</div>
 
-					<label for="" class="text-[22px]">Nama</label>
+					{{-- <label for="" class="text-[22px]">Nama</label> --}}
 					<div class="wrap-input100-reg validate-input" data-validate="Enter password">
 						<input class="input100" type="text" name="nama">
-						<span class="" data-placeholder="Nama"></span>
+						<span class="focus-input100 " data-placeholder="Nama"></span>
 					</div>
 
-					<label for="" class="text-[22px]">Kata Sandi</label>
+					{{-- <label for="" class="text-[22px]">Kata Sandi</label> --}}
 					<div class="wrap-input100-reg validate-input" data-validate="Enter password">
 						<input class="input100" type="password" name="password">
-						<span class="" data-placeholder="Password"></span>
+						<span class="focus-input100 " data-placeholder="Password"></span>
 					</div>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" type="submit">
