@@ -54,7 +54,7 @@
                             @auth
                             <button
                                 class="bg-[#5E7C60] py-4 px-8 text-white rounded-lg mt-8 bg-opacity-90 hover:opacity-80 font-medium">
-                                <a href="{{url('/pengajuan')}}">Pengajuan</a>
+                                <a href="{{url('pengajuan')}}">Pengajuan</a>
                             </button>
                             @else
                             <button

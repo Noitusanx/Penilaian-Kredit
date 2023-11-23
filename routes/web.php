@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PenilaianKreditController;
+use App\Http\Controllers\PengajuanController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,10 @@ Route::post('/daftar', [PenilaianKreditController::class, 'storeReg']);
 
 Route::post('/keluar', [PenilaianKreditController::class, 'logout']);
 
-Route::get('/pengajuan', function () {
-    return view('pengajuan');
-})->middleware('auth');
+
+
+Route::get('/pengajuan', [PengajuanController::class, 'index'])->middleware('auth');
+Route::post('/pengajuan', [PengajuanController::class, 'ajukan'])->middleware('auth');
 
 Route::get('/profil', function () {
     return view('user/profil');
