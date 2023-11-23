@@ -29,7 +29,7 @@
             <li>
                 <form action="/keluar" method="post">
                     @csrf
-                    <button type="submit" class="px-3 pt-5 hover:opacity-60">Keluar</button>
+                    <button type="submit" class="px-3 pty-2 hover:opacity-60">Keluar</button>
                 </form>
             </li>
         </ul>
