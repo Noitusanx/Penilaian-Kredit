@@ -46,16 +46,16 @@
 					<span class="login100-form-title p-b-34 p-t-27">
 						Selamat Datang
 					</span>
-					<label for="" class="text-[22px]">NIK</label>
+					{{-- <label for="" class="text-[22px]">NIK</label> --}}
 					<div class="wrap-input100 validate-input" data-validate="Enter username">
 						<input class="input100" type="text" name="nik">
-						<span data-placeholder="NIK"></span>
+						<span class="focus-input100 " data-placeholder="NIK"></span>
 					</div>
 
-					<label for="" class="text-[22px]">Kata Sandi</label>
+					{{-- <label for="" class="text-[22px]">Kata Sandi</label> --}}
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
 						<input class="input100" type="password" name="password">
-						<span data-placeholder="Password"></span>
+						<span class="focus-input100 " data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
