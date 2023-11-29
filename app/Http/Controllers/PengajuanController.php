@@ -83,11 +83,10 @@ class PengajuanController extends Controller
 
          if($poin >= 40){
             $status = "terima";
+            
          } else{
             $status = "tolak";
          }
-
-         
 
         $pengajuan = Pengajuans::create([
             'nama' => $request->nama,
@@ -101,10 +100,8 @@ class PengajuanController extends Controller
             'tanggungan' => $request->tanggungan,
             'status' => $status,
         ]);
-      
         return view('user.hasil', [
             'status' => $status
         ]);
-      }
-      
+    }
 }

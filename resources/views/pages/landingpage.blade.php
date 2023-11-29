@@ -15,12 +15,12 @@
             <img class="w-full max-h-[50rem] object-cover" src="{{asset('images/batik.jpg')}}" alt="Batik">
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-4/5 h-4/5 bg-white p-8 rounded-lg bg-opacity-90 flex flex-col">
-                    <nav class="flex justify-between mb-4 text-[20px]">
+                    <nav class="flex justify-between mb-4 text-[24px]">
                         <div>
                             <a href="{{url('/')}}" class="hover:opacity-60">Penilaian Kredit</a>
                         </div>
                         <div>
-                            <ul class="flex gap-10 mr-5">
+                            <ul class="flex gap-10 mr-5 text-[20px]">
                                 @auth
                                 <li>
                                     <a href="" class="hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>

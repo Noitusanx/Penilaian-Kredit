@@ -14,9 +14,9 @@
 <body class="bg-[#F9F5F2] font-lexend">
     <div class="flex justify-between p-[30px]">
         <div class="flex items-center justify-center">
-            <a href="{{url('/')}}" class="hover:opacity-60 text-[20px]">Penilaian Kredit</a>
+            <a href="{{url('/')}}" class="hover:opacity-60 text-[24px]">Penilaian Kredit</a>
         </div>
-        <ul class="flex justify-between items-center text-[20px] px-[20px]">
+        <ul class="flex justify-between text-[20px] px-[20px] mt-3">
             <li>
                 <a href=" #" class="px-3 py-2 hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
             </li>
@@ -29,7 +29,7 @@
             <li>
                 <form action="/keluar" method="post">
                     @csrf
-                    <button type="submit" class="px-3 pty-2 hover:opacity-60">Keluar</button>
+                    <button type="submit" class="px-3 hover:opacity-60">Keluar</button>
                 </form>
             </li>
         </ul>

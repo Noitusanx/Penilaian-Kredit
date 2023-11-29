@@ -52,57 +52,28 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($datas as $data)
             <tr>
                 <td class="w-[120px] h-[50px] border border-black text-center">
-                    1
+                    {{ $loop->iteration }}
                 </td>
                 <td class="w-[400px] h-[50px] border border-black text-center">
-                    Sultan
+                    {{$data->nama}}
                 </td>
                 <td class="w-[350px] h-[50px] border border-black text-center">
-                    00182999100
+                    {{$data->nik}}
                 </td>
                 <td class="w-[250px] h-[50px] border border-black text-center">
-                    Diterima
+                    {{$data->status}}
                 </td>
                 <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
+                    <a href="{{ url("admin/$data->id/detailpengajuan") }}"
+                        class="text-[#5E7C60] hover:font-bold">View Form</a>
+
+
                 </td>
             </tr>
-            <tr>
-                <td class="w-[120px] h-[50px] border border-black text-center">
-                    2
-                </td>
-                <td class="w-[400px] h-[50px] border border-black text-center">
-                    Sultan S
-                </td>
-                <td class="w-[350px] h-[50px] border border-black text-center">
-                    00182888100
-                </td>
-                <td class="w-[250px] h-[50px] border border-black text-center">
-                    Ditolak
-                </td>
-                <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="w-[120px] h-[50px] border border-black text-center">
-                    3
-                </td>
-                <td class="w-[400px] h-[50px] border border-black text-center">
-                    Sultan Shd
-                </td>
-                <td class="w-[350px] h-[50px] border border-black text-center">
-                    00182779100
-                </td>
-                <td class="w-[250px] h-[50px] border border-black text-center">
-                    Diterima
-                </td>
-                <td class="w-[200px] h-[50px] border border-black text-center">
-                    <a href="/admin-detail-pengajuan" class="text-[#5E7C60] hover:font-bold">View Form</a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

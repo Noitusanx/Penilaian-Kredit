@@ -41,6 +41,7 @@ Route::get('/profil', function () {
     return view('user/profil');
 });
 
+// ! Hapus bagian ini
 Route::get('/hasil-setuju', function () {
     return view('user/hasil_setuju');
 });
@@ -49,12 +50,12 @@ Route::get('/hasil-tolak', function () {
     return view('user/hasil_tolak');
 });
 
-Route::get('/admin-data-pengajuan', function () {
-    return view('admin/all_data_pengajuan');
-})->middleware('admin');
+Route::get('/admin/datanasabah', [PenilaianKreditController::class, 'dataNasabah'])->middleware('admin');
 
-Route::get('/admin-detail-pengajuan', function () {
-    return view('admin/informasi_detail');
-})->middleware('admin');
+Route::get('/admin/{id}/detailpengajuan', [PenilaianKreditController::class, 'detailPengajuan'])
+    ->middleware('admin');
+
+
+
 
 

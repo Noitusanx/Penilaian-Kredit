@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengajuans;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,7 @@ class PenilaianKreditController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/admin-data-pengajuan');
+            return redirect()->intended('/admin/datanasabah');
         }
 
         return back()->with('loginError', 'Login gagal!');
@@ -49,4 +50,17 @@ class PenilaianKreditController extends Controller
         return redirect('masuk');
 
     }
+
+    public function dataNasabah(){
+        $datas = Pengajuans::select('id', 'nama', 'nik', 'status')->get();
+        return view('admin.all_data_pengajuan', compact('datas'));
+    }
+
+    public function detailPengajuan($id)
+    {
+        $data = Pengajuans::find($id);
+
+        return view('admin/informasi_detail', compact('data'));
+    }
+
 }
