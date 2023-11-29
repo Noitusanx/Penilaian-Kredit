@@ -1,6 +1,6 @@
 @extends('layouts.admin') @section('container')
 <!-- Navbar -->
-<div class="flex justify-between p-[30px]">
+<div class="flex justify-between p-[30px] font-lexend">
     <!-- Logo -->
     <div class="flex items-center justify-center">
         <a href="{{url('/')}}" class="hover:opacity-60 text-[20px]">Penilaian Kredit</a>
@@ -21,14 +21,14 @@
 
 <!-- Title -->
 <div>
-    <h1 class="flex justify-center text-4xl font-bold py-5">
+    <h1 class="flex justify-center text-4xl font-bold py-5 font-lexend">
         INFORMASI NASABAH
     </h1>
     <hr style="height: 3px; color: black; background-color: black" />
 </div>
 
 <!-- Form -->
-<div class="flex justify-center py-[50px]">
+<div class="flex justify-center py-[50px] font-lexend">
     <div class="bg-[#D5D6C6] w-[700px] h-auto p-10 rounded-[20px] font-lexend-deca">
         <div class="px-[60px]">
             <div>

@@ -2,14 +2,14 @@
 
 @section('container')
 <!-- Navbar -->
-<div class="flex justify-between p-[30px]">
+<div class="flex justify-between p-[30px] font-lexend">
     <!-- Logo -->
     <div class="flex items-center justify-center">
         <a href="{{url('/')}}" class="hover:opacity-60 text-[20px]">Penilaian Kredit</a>
     </div>
 
     <!-- Menu -->
-    <div class="flex justify-between items-center text-[20px] px-[20px]">
+    <div class="flex justify-between items-center text-[20px] px-[20px] ">
         <!-- Hi, user -->
         <a href="#" class="px-3 py-2 hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
 
@@ -23,14 +23,14 @@
 
 <!-- Title -->
 <div>
-    <h1 class="flex justify-center text-4xl font-bold py-5">
+    <h1 class="flex justify-center text-4xl font-bold py-5 font-lexend">
         DATA NASABAH PENGAJUAN PINJAMAN UANG
     </h1>
     <hr style="height: 3px; color: black; background-color: black" />
 </div>
 
 <!-- Tabel Data -->
-<div class="flex justify-center mt-[60px]">
+<div class="flex justify-center mt-[60px] font-lexend">
     <table class="">
         <thead class="">
             <tr>
@@ -69,8 +69,6 @@
                 <td class="w-[200px] h-[50px] border border-black text-center">
                     <a href="{{ url("admin/$data->id/detailpengajuan") }}"
                         class="text-[#5E7C60] hover:font-bold">View Form</a>
-
-
                 </td>
             </tr>
             @endforeach
