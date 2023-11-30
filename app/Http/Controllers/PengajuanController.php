@@ -70,11 +70,14 @@ class PengajuanController extends Controller
         } 
 
 
+
         $persen_pendapatan = $request->pendapatan_actual * 0.35;
         $pinjaman = $request->jlh_pinjam_actual;
+
+        $pinjamanBulanan = $pinjaman/$request->tenor;
         // dd((int)$persen_pendapatan); 
         // dd($request->jlh_pinjam_actual);
-        if($pinjaman < (int)$persen_pendapatan && $request->umur == ">=18"){
+        if($pinjamanBulanan < (int)$persen_pendapatan && $request->umur == ">=18"){
 
             $poin += 10;
          } else {
@@ -98,6 +101,7 @@ class PengajuanController extends Controller
             'pekerjaan' => $request->pekerjaan,
             'pernikahan' => $request->pernikahan,
             'tanggungan' => $request->tanggungan,
+            'tenor' => $request->tenor,
             'status' => $status,
         ]);
         return view('user.hasil', [

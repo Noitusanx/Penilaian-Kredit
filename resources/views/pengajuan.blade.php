@@ -1,4 +1,4 @@
-@extends('layouts.navigation')
+@extends('layouts.navigation-form')
 @section('title')
 Pengajuan
 @endsection
@@ -41,6 +41,19 @@ Pengajuan
         class="w-[500px] h-[40px] bg-[#F9F5F2] flex justify-start items-center p-[10px] rounded-[5px] mt-1 mb-[15px]" 
         oninput="formatInput1(this);" />
        </div>
+
+       <div>
+        <label for="tenor">Tenor</label>
+        <select id="tenor" name="tenor" class="w-[500px] h-[40px] bg-[#F9F5F2] rounded-[5px] p-[10px] mt-1 mb-[15px]">
+          <option value="6">6 bulan</option>
+          <option value="12">1 tahun</option>
+          <option value="18">1.5 tahun</option>
+          <option value="24">2 tahun</option>
+          <option value="30">2.5 tahun</option>
+          <option value="36">3 tahun</option>
+        </select>
+      </div>
+
       <div>
         <label for="tujuan_pinjam">Tujuan Pinjaman</label>
         <select id="tujuan" name="tujuan" class="w-[500px] h-[40px] bg-[#F9F5F2] rounded-[5px] p-[10px] mt-1 mb-[15px]">

@@ -62,7 +62,7 @@
             <li class="h-[50px] flex items-center">
                 <form action="/keluar" method="post">
                     @csrf
-                    <button type="submit" class="px-3 py-2 hover:opacity-60">Keluar</button>
+                    <button type="submit" class="px-3 hover:opacity-60">Keluar</button>
                 </form>
             </li>
             @endif

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('tujuan');
             $table->bigInteger('pendapatan');
             $table->string('pekerjaan');
+            $table->string('tenor');
             $table->string('pernikahan');
             $table->string('tanggungan');
             $table->string('status');

@@ -1,4 +1,4 @@
-@extends('layouts.navigation')
+@extends('layouts.navigation-hasil')
 @section('title')
 Hasil Keputusan
 @endsection

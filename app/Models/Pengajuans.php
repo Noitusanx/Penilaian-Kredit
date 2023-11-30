@@ -20,5 +20,6 @@ class Pengajuans extends Model
         'pernikahan',
         'tanggungan',
         'status',
+        'tenor',
     ];
 }
