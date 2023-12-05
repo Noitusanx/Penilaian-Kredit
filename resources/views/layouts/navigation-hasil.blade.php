@@ -57,6 +57,9 @@
                 <a href="{{url('/')}}" class="px-3 py-2 hover:opacity-60">Beranda</a>
             </li>
             <li class="h-[50px]">
+                <a href="{{ url("admin/$pengajuan->id/detailpengajuan/pdf") }}" class="px-3 py-2 hover:opacity-60">Download Berkas Pengajuan</a>
+             </li>
+            <li class="h-[50px]">
                 <a href="#" class="px-3 py-2 hover:opacity-60">Tentang Kami</a>
             </li>
             <li class="h-[50px] flex items-center mb-5">

@@ -105,6 +105,7 @@ class PengajuanController extends Controller
             'status' => $status,
         ]);
         return view('user.hasil', [
+            'pengajuan' => $pengajuan,
             'status' => $status
         ]);
     }
