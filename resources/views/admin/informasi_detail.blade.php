@@ -8,6 +8,7 @@
 
     <!-- Menu -->
     <div class="flex justify-between items-center text-[20px] px-[20px]">
+
         <!-- Hi, user -->
         <a href="#" class="px-3 py-2 hover:opacity-60">Hi, {{ auth()->user()->nama}}</a>
 
@@ -49,7 +50,7 @@
                 <h2 for="umur">Umur</h2>
                 <h3 type="text" id="umur" name="umur"
                     class="w-[500px] h-[40px] bg-[#F9F5F2] flex justify-start items-center p-[10px] rounded-[5px] mt-1 mb-[15px]">
-                    {{$data->umur}}
+                    {{$data->umur}} tahun
                 </h3>
             </div>
             <div>
@@ -57,6 +58,13 @@
                 <h3 id="jlh_pinjam" name="jlh_pinjam"
                     class="w-[500px] h-[40px] bg-[#F9F5F2] flex justify-start items-center p-[10px] rounded-[5px] mt-1 mb-[15px]">
                     Rp. {{number_format($data ->jlh_pinjam, 0, ',', '.')}}
+                </h3>
+            </div>
+            <div>
+                <h2 for="tenor">Tenor</h2>
+                <h3 id="tenor" name="tenor"
+                    class="w-[500px] h-[40px] bg-[#F9F5F2] flex justify-start items-center p-[10px] rounded-[5px] mt-1 mb-[15px]">
+                    {{$data->tenor}} bulan
                 </h3>
             </div>
             <div>

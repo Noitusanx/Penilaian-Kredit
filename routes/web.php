@@ -3,6 +3,7 @@
 use App\Http\Controllers\PenilaianKreditController;
 use App\Http\Controllers\PengajuanController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,10 +30,7 @@ Route::get('/daftar', function () {
 
 Route::post('/daftar', [PenilaianKreditController::class, 'storeReg']);
 
-
 Route::post('/keluar', [PenilaianKreditController::class, 'logout']);
-
-
 
 Route::get('/pengajuan', [PengajuanController::class, 'index'])->middleware('auth');
 Route::post('/pengajuan', [PengajuanController::class, 'ajukan'])->middleware('auth');
@@ -41,21 +39,12 @@ Route::get('/profil', function () {
     return view('user/profil');
 });
 
-// ! Hapus bagian ini
-Route::get('/hasil-setuju', function () {
-    return view('user/hasil_setuju');
-});
-
-Route::get('/hasil-tolak', function () {
-    return view('user/hasil_tolak');
-});
-
 Route::get('/admin/datanasabah', [PenilaianKreditController::class, 'dataNasabah'])->middleware('admin');
 
 Route::get('/admin/{id}/detailpengajuan', [PenilaianKreditController::class, 'detailPengajuan'])
     ->middleware('admin');
 
-
+Route::get('/admin/{id}/detailpengajuan/pdf', [PenilaianKreditController::class, 'createPDF']);
 
 
 

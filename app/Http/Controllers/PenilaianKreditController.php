@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PenilaianKreditController extends Controller
 {
@@ -63,4 +64,13 @@ class PenilaianKreditController extends Controller
         return view('admin/informasi_detail', compact('data'));
     }
 
+    public function createPDF($id) {
+    
+      // retreive all records from db
+      $data = Pengajuans::find($id);
+
+      $pdf = PDF::loadView('admin/informasi_detail_pdf', compact('data'));
+   
+      return $pdf->download('informasi_detail.pdf');
+    }
 }

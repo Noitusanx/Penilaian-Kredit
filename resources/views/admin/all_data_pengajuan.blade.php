@@ -30,11 +30,11 @@
 </div>
 
 <!-- Tabel Data -->
-<div class="flex justify-center mt-[60px] font-lexend">
+<div class="flex justify-center mt-[60px] font-lexend mx-5">
     <table class="">
         <thead class="">
             <tr>
-                <th class="w-[120px] h-[50px] bg-[#D5D6C6] text-3xl border border-black text-center">
+                <th class="w-[120px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     No
                 </th>
                 <th class="w-[400px] h-[50px] bg-[#D5D6C6] border border-black text-center">
@@ -48,6 +48,9 @@
                 </th>
                 <th class="w-[200px] h-[50px] bg-[#D5D6C6] border border-black text-center">
                     Form
+                </th>
+                <th class="w-[200px] h-[50px] bg-[#D5D6C6] border border-black text-center">
+                    PDF
                 </th>
             </tr>
         </thead>
@@ -69,6 +72,10 @@
                 <td class="w-[200px] h-[50px] border border-black text-center">
                     <a href="{{ url("admin/$data->id/detailpengajuan") }}"
                         class="text-[#5E7C60] hover:font-bold">View Form</a>
+                </td>
+                <td class="w-[200px] h-[50px] border border-black text-center">
+                    <a class="btn btn-primary" href="{{ url("admin/$data->id/detailpengajuan/pdf") }}">Export to
+                        PDF</a>
                 </td>
             </tr>
             @endforeach
